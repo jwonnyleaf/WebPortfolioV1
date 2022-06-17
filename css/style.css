@@ -4,8 +4,9 @@
     --main-blue: #426AD6;
     --ashy-blue: #464655;
     --slaty-blue: #12255b;
-    --white: #57595d;
+    --gray: #57595d;
     --lime: #E6F8B2;
+    --white: #FFF;
 }
 @font-face {
     font-family: 'FiraCode';
@@ -14,6 +15,10 @@
 @font-face {
     font-family: 'Nunito';
     src: url("/fonts/Nunito-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url("/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
 }
 *{
     margin: 0;
@@ -44,7 +49,6 @@ a{
 li{
     list-style-type: none;
 }
-
 /*
     
     RANDOM / MISC
@@ -54,7 +58,21 @@ li{
     color: var(--main-blue);
     font-variation-settings: "wght" 700;
 }
-
+.primary-btn{
+    font-family: "OpenSans";
+    font-variation-settings: "wght" 900;
+    background-color: transparent;
+    color: var(--main-blue);
+    border: 3px solid var(--main-blue);
+    border-radius: 50px;
+    padding: .7rem 1.3rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.primary-btn:hover{
+    background-color: var(--main-blue);
+    color: var(--white);
+}
 
 /*
     
@@ -87,7 +105,7 @@ li{
 }
 .navbar__link{
     margin: 1.2rem;
-    color: var(--white);
+    color: var(--gray);
     font-family: "Nunito";
     font-variation-settings: "wght" 900;
     font-size: 1.2rem;
@@ -101,7 +119,67 @@ li{
     font-size: 1.5rem;
 }
 
+/*
+    
+    MODAL
 
+*/
+.modal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transform: translate(-100%, -100%);
+    transition: all .5s ease-out;
+}
+.modal--open .modal{
+    z-index: 999;
+    transform: translate(0%, 0%);
+    visibility: visible;
+}
+.modal__content{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    height: 600px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+}
+.modal__left{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+}
+.modal__right{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+}
+.modal__close{
+    position: absolute;
+    transform: rotate(45deg);
+    cursor: pointer;
+    font-family: "Nunito";
+    font-size: 4rem;
+    font-variation-settings: "wght" 500;
+    top: 0;
+    right: 25px;
+}
+.form__box{
+    margin: 0 0 25px 0;
+}
+.form__input{
+    width: 100%;
+    resize: vertical;
+}
 /*
     
     HOME
@@ -132,8 +210,12 @@ li{
     max-width: 525px;
     margin: 15px 0 0 0;
 }
-
-
+.home__btn{
+    margin-top: 2.4rem;
+}
+.home__btn--hire{
+    transition: all .5s;
+}
 /*
     
     PROJECTS

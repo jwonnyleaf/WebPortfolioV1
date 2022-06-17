@@ -41,14 +41,16 @@
     <!-- * * * * * * * * * * HERO / HOME * * * * * * * * * * -->
     <section class="home" id="home">
         <div class="home__content">
-            <div><h3 class="small-header">Hi,</h3></div>
+            <h3 class="small-header">Hi,</h3>
             <h1 class="big-header">I'M JOHNNY.</h1>
             <h1 class="big-subheader">I CREATE <span class="typing"></span></h1>
             <p class="home__para">
                 I'm a third-year Computing student at Texas A&M University, pursuing to become a <span class=highlighted>Full Stack Developer</span>. I am looking for an environment where I can challenge and apply my strong technical and 
                 analytic skills in the solving of <span class=highlighted>complex engineering problems</span> and organization goals.
             </p>
-            <a href="./static/Resume.pdf" target="_blank" class="btn btn__resume">Download My Resume</a>
+            <div class="home__btn">
+                <button class="home__btn--hire primary-btn" onclick="toggleModal()">HIRE ME</button>
+            </div>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -63,9 +65,39 @@
     </script>
 
 
+    <!-- * * * * * * * * * * CONTACT MODAL * * * * * * * * * * -->
+    <div class="modal">
+        <div class="modal__content">
+            <div class="modal__left">
+            </div>
+            <div class="modal__right">
+                <h2 class="modal__title--right">Let's talk, but first coffee!</h2>
+                <form id="contact__form" onsubmit="">
+                    <div class="form__box">
+                        <label class="form__box--name">Name</label>
+                        <input class="form__input" type="text" required>
+                    </div>
+                    <div class="form__box">
+                        <label class="form__box--name">Email</label>
+                        <input class="form__input" type="email" required>
+                    </div>
+                    <div class="form__box">
+                        <label class="form__box--name">Message</label>
+                        <textarea class="form__input" type="text" required></textarea>
+                    </div>
+                    <div class="form__btn">
+                        <a href="" class="primary-btn">Send</a>
+                    </div>
+                </form>
+            </div>
+            <div class="modal__close">
+                <b onclick="toggleModal()">+</b>
+            </div>
+        </div>
+    </div>
+
     <!-- * * * * * * * * * * PROJECTS * * * * * * * * * * -->
     <section class="projects" id="projects">
-        <div></div>
     </section>
 </body>
 </html>
