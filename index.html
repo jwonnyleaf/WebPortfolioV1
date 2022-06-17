@@ -10,7 +10,7 @@
     <!-- # # # GOOGLE FONT # # # -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap" rel="stylesheet"> 
 
     
     <title>Johnny Le</title>
@@ -37,9 +37,35 @@
         </nav>
     </header>
 
-    <!-- # # # # DISAPPEARING NAVBAR JAVASCRIPT # # # # -->
+
+    <!-- * * * * * * * * * * HERO / HOME * * * * * * * * * * -->
+    <section class="home" id="home">
+        <div class="home__content">
+            <div><h3 class="small-header">Hi,</h3></div>
+            <h1 class="big-header">I'M JOHNNY.</h1>
+            <h1 class="big-subheader">I CREATE <span class="typing"></span></h1>
+            <p class="home__para">
+                I'm a third-year Computing student at Texas A&M University, pursuing to become a <span class=highlighted>Full Stack Developer</span>. I am looking for an environment where I can challenge and apply my strong technical and 
+                analytic skills in the solving of <span class=highlighted>complex engineering problems</span> and organization goals.
+            </p>
+            <a href="./static/Resume.pdf" target="_blank" class="btn btn__resume">Download My Resume</a>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".typing", {
+            strings: ["WEB STUFF.", "CONTENT.", "COOL TECH.", "SOFTWARE."],
+            typeSpeed: 120,
+            backSpeed: 50,
+            backDelay: 5 * (1000),
+            loop: true,
+        })
+    </script>
 
 
-    <!-- * * * * * * * * * * HOME * * * * * * * * * * -->
+    <!-- * * * * * * * * * * PROJECTS * * * * * * * * * * -->
+    <section class="projects" id="projects">
+        <div></div>
+    </section>
 </body>
 </html>
