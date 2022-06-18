@@ -98,52 +98,55 @@ TERMINAL STUFF
 }
 .modal__content--text p{
     font-family: "system-ui";
+    font-size: 1.5rem;
 }
-.command:nth-child(1)::before{
+.cmd:nth-child(1)::before{
     content: "Local-MacBook-Pro:~ user$ ";
 }
-.command:nth-child(1){
-    width: 22%;
+.cmd__anim1{
+    width: 300.5px;
     white-space: nowrap;
     overflow-x: hidden;
-}
-.command__anim1{
-    animation: write-command1 3s forwards;
+    animation: write-cmd1 3s forwards;
     animation-delay: 1s;
 }
-.command:nth-child(2)::before{
-    content: "Local-MacBook-Pro: Website $ ";
+.cmd:nth-child(2)::before{
+    content: "Local-MacBook-Pro: WebsiteV1 $ ";
 }
-.command:nth-child(2){
-    width: 24.5%;
+.cmd__anim2{
+    height: 0px;
+    width: 358px;
     white-space: nowrap;
     overflow-x: hidden;
-}
-.command__anim2{
-    animation: write-command2 3s forwards;
-    animation-delay: 2.2s;
+    animation: write-cmd2 3s forwards;
+    animation-delay: 2.5s;
 }
 .output:nth-child(1)::before{
     content: "";
 }
-.output:nth-child(1){
-    height: 0;
-    white-space: nowrap;
+.output--anim1{
+    height: 0px;
     overflow-y: hidden;
+    animation: print-output1 .15s forwards;
+    animation-delay: 2.7s;
 }
-.output:nth-child(2)::before{
-    content: "";
+.cmd:nth-child(4)::before{
+    content: "Local-MacBook-Pro: WebsiteV1 $ ";
 }
-.output:nth-child(2){
-    height: 0;
+.cmd__anim3{
+    height: 0px;
+    width: 358px;
     white-space: nowrap;
-    overflow-y: hidden;
+    overflow-x: hidden;
+    animation: write-cmd3 3s forwards;
+    animation-delay: 3.7s;
 }
-.output__anim1{
-    animation: print-output 0.1s forwards;
-    animation-delay: 2.5s;
+.cmd:nth-child(5)::before{
+    content: "Local-MacBook-Pro: WebsiteV1 $ ";
 }
-
+.cmd__anim3{
+    height: 0px;
+}
 .modal__content--form{
     visibility: hidden;
 }
@@ -156,6 +159,48 @@ TERMINAL STUFF
     font-variation-settings: "wght" 500;
     top: 0;
     right: 25px;
+}
+
+
+/* 
+
+WINDOW - CONTACT FORM
+
+*/
+.window{
+    top: 450px;
+    left: 700px;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px var(--gray);
+    visibility: hidden;
+    
+}
+.window--open .window{
+    visibility: visible;
+    z-index: 9999;
+}
+.window__top--bar{
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+    height: 35px;
+    background-color: #E3E4E4;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    user-select: none;
+}
+.window__title{
+    position: absolute;
+    min-width: 600px;
+    text-align: center;
+    font-family: "system-ui";
+    font-weight: 700;
+    color: black;
+    font-size: 15px;
 }
 .form__box{
     margin: 0 0 25px 0;
@@ -171,27 +216,35 @@ TERMINAL STUFF
     ANIMATIONS / KEYFRAMES
 
 */
-@keyframes write-command1 {
+@keyframes write-cmd1 {
     0% {
-      width: 22%;
+      width: 300.5px;
     }
     100% {
       width: 100%;
     }
 }
-@keyframes write-command2 {
+@keyframes write-cmd2 {
     0% {
-      width: 24.5%;
+      width: 358px;
     }
     100% {
       width: 100%;
     }
 }
-@keyframes print-output {
+@keyframes write-cmd3 {
+    0% {
+        width: 358px;
+    }
+    100% {
+        width: 100%;
+    }
+}
+@keyframes print-output1 {
     0% {
         height: 0%;
     }
     100% {
-        height: 138px;
+        height: 192px;
     }
 }

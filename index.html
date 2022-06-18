@@ -31,7 +31,7 @@
                     <a href="./index.html#projects" class="navbar__link">Projects</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="#" class="navbar__link">Contact</a>
+                    <a onclick="toggleModal()" class="navbar__link">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -78,20 +78,28 @@
                 <div class="top--bar__title">Johnny Le — -bash — 80x24</div>
             </div>
             <div class="modal__content--text">
-                <p class="command">cd Desktop/Projects/Website/</p>
-                <p class="command">ls </p>
+                <p class="cmd">cd Desktop/Projects/WebsiteV1/</p>
+                <p class="cmd">ls</p>
                 <p class="output">
-                    contact.exe <br>
-                    Framework <br>
-                    Memes <br>
-                    css <br>
-                    js <br>
-                    index.html <br>
+                    contact.exe <br />
+                    fonts <br />
+                    memes <br />
+                    css <br />
+                    js <br />
+                    index.html
                 </p>
-                <p class="command">open </p>
-                <p class="output">
-                    lol
-                </p>
+                <p class="cmd">open contact.exe</p>
+                <p class="cmd"></p>
+            </div>
+        </div>
+        <div class="window">
+            <div class="window__top--bar">
+                <div class="buttons__container">
+                    <b class="buttons close" onclick="toggleModal()">+</b>
+                    <b class="buttons minimize" onclick=""></b>
+                    <b class="buttons maximize" onclick=""></b>
+                </div>
+                <div class="window__title">contact.exe</div>
             </div>
             <div class="modal__content--form">
                 <form id="contact__form" onsubmit="">
