@@ -45,8 +45,9 @@
             <h1 class="big-header">I'M JOHNNY.</h1>
             <h1 class="big-subheader">I CREATE <span class="typing"></span></h1>
             <p class="home__para">
-                I'm a third-year Computing student at Texas A&M University, pursuing to become a <span class=highlighted>Full Stack Developer</span>. I am looking for an environment where I can challenge and apply my strong technical and 
-                analytic skills in the solving of <span class=highlighted>complex engineering problems</span> and organization goals.
+                I'm a third-year Computing student at Texas A&M University and an aspiring <span class=highlighted>Full Stack Developer</span>. 
+                I am looking for an environment where I can challenge and apply my strong technical and analytic skills to solve <span class=highlighted>complex engineering problems</span> 
+                and organization goals.
             </p>
             <div class="home__btn">
                 <button class="home__btn--hire primary-btn" onclick="toggleModal()">HIRE ME</button>
@@ -68,10 +69,17 @@
     <!-- * * * * * * * * * * CONTACT MODAL * * * * * * * * * * -->
     <div class="modal">
         <div class="modal__content">
-            <div class="modal__left">
+            <div class="modal__top--bar">
+                <div class="buttons__container">
+                    <b class="buttons close" onclick="toggleModal()">+</b>
+                    <b class="buttons minimize" onclick=""></b>
+                    <b class="buttons maximize" onclick=""></b>
+                </div>
+                <div class="top--bar__title">Johnny Le — -bash — 80x24</div>
             </div>
-            <div class="modal__right">
-                <h2 class="modal__title--right">Let's talk, but first coffee!</h2>
+            <div class="modal__content--text">
+            </div>
+            <div class="modal__content--form">
                 <form id="contact__form" onsubmit="">
                     <div class="form__box">
                         <label class="form__box--name">Name</label>
@@ -89,9 +97,6 @@
                         <a href="" class="primary-btn">Send</a>
                     </div>
                 </form>
-            </div>
-            <div class="modal__close">
-                <b onclick="toggleModal()">+</b>
             </div>
         </div>
     </div>

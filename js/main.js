@@ -1,6 +1,7 @@
 let modalVisible = false;
 var _navbar = document.querySelector('.navbar');
 var prevScroll = window.scrollY;
+
 window.onscroll = function() {
     var currScroll = window.scrollY;
     if(prevScroll < currScroll) {
@@ -19,8 +20,10 @@ window.onscroll = function() {
 function toggleModal() {
     if(modalVisible) {
         modalVisible = false;
-        return document.body.classList.remove("modal--open");
+        document.body.classList.remove("modal--open");
+        return;
     }
     modalVisible = true;
     document.body.classList.add("modal--open");
 }
+
