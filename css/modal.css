@@ -1,0 +1,197 @@
+/*
+    
+    MODAL
+
+*/
+.modal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transform: translate(-100%, 100%);
+    transition: all .5s ease-out;
+}
+.modal--open .modal{
+    z-index: 999;
+    transform: translate(0%, 0%);
+    visibility: visible;
+}
+.modal__content{
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    height: 600px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px var(--gray);
+}
+
+/* 
+
+TERMINAL STUFF
+
+*/
+.modal__top--bar{
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+    height: 35px;
+    background-color: #E3E4E4;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    user-select: none;
+}
+.top--bar__title{
+    position: absolute;
+    min-width: 1000px;
+    text-align: center;
+    font-family: "system-ui";
+    font-weight: 700;
+    color: black;
+    font-size: 15px;
+}
+.buttons__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 85px;
+    height: 100%;
+    align-content: center;
+    margin-left: 10px;
+    z-index: 999;
+}
+.buttons{
+    height: 17px;
+    width: 17px;
+    border-radius: 100%;
+    user-select: none;
+    cursor: pointer;
+}
+.close{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: rotate(-270deg);
+    color: #FC6157;
+    background-color: #FC6157;
+    border: 1px solid #DA3C37;
+    transition: all .3s;
+}
+.close:hover{
+    transform: rotate(45deg);
+    color: black;
+}
+.minimize{
+    background-color: #FBBD2D;
+    border: 1px solid #F0A318;
+}
+.maximize{
+    background-color: #26C83F;
+    border: 1px solid #12A025;
+}
+.modal__content--text{
+    margin: 10px 10px;
+}
+.modal__content--text p{
+    font-family: "system-ui";
+}
+.command:nth-child(1)::before{
+    content: "Local-MacBook-Pro:~ user$ ";
+}
+.command:nth-child(1){
+    width: 22%;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+.command__anim1{
+    animation: write-command1 3s forwards;
+    animation-delay: 1s;
+}
+.command:nth-child(2)::before{
+    content: "Local-MacBook-Pro: Website $ ";
+}
+.command:nth-child(2){
+    width: 24.5%;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+.command__anim2{
+    animation: write-command2 3s forwards;
+    animation-delay: 2.2s;
+}
+.output:nth-child(1)::before{
+    content: "";
+}
+.output:nth-child(1){
+    height: 0;
+    white-space: nowrap;
+    overflow-y: hidden;
+}
+.output:nth-child(2)::before{
+    content: "";
+}
+.output:nth-child(2){
+    height: 0;
+    white-space: nowrap;
+    overflow-y: hidden;
+}
+.output__anim1{
+    animation: print-output 0.1s forwards;
+    animation-delay: 2.5s;
+}
+
+.modal__content--form{
+    visibility: hidden;
+}
+.modal__close{
+    position: absolute;
+    transform: rotate(45deg);
+    cursor: pointer;
+    font-family: "Nunito";
+    font-size: 4rem;
+    font-variation-settings: "wght" 500;
+    top: 0;
+    right: 25px;
+}
+.form__box{
+    margin: 0 0 25px 0;
+}
+.form__input{
+    width: 100%;
+    resize: vertical;
+}
+
+
+/*
+    
+    ANIMATIONS / KEYFRAMES
+
+*/
+@keyframes write-command1 {
+    0% {
+      width: 22%;
+    }
+    100% {
+      width: 100%;
+    }
+}
+@keyframes write-command2 {
+    0% {
+      width: 24.5%;
+    }
+    100% {
+      width: 100%;
+    }
+}
+@keyframes print-output {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 138px;
+    }
+}

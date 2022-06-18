@@ -1,6 +1,8 @@
 let modalVisible = false;
-var _navbar = document.querySelector('.navbar');
+var _navbar = document.querySelector(".navbar");
 var prevScroll = window.scrollY;
+var command_children = document.querySelectorAll(".command:nth-child(n)");
+var output_children = document.querySelectorAll(".output:nth-child(n)");
 
 window.onscroll = function() {
     var currScroll = window.scrollY;
@@ -21,9 +23,15 @@ function toggleModal() {
     if(modalVisible) {
         modalVisible = false;
         document.body.classList.remove("modal--open");
+        command_children.item(0).classList.remove("command__anim1");
+        command_children.item(1).classList.remove("command__anim2");
+        output_children.item(0).classList.remove("output__anim1");
         return;
     }
     modalVisible = true;
     document.body.classList.add("modal--open");
+    command_children.item(0).classList.add("command__anim1");
+    command_children.item(1).classList.add("command__anim2");
+    output_children.item(0).classList.add("output__anim1");
 }
 
