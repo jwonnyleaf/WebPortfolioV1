@@ -20,7 +20,7 @@
 }
 @font-face{
     font-family: 'OpenSans';
-    src: url("/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
+    src: url("/fonts/OpenSans-VariableFont_wght.ttf");
 }
 @font-face{
     font-family: 'Menlo';
@@ -67,7 +67,7 @@ li{
 }
 .primary-btn{
     font-family: "OpenSans";
-    font-variation-settings: "wght" 900;
+    font-variation-settings: "wght" 800;
     background-color: transparent;
     color: var(--main-blue);
     border: 3px solid var(--main-blue);
