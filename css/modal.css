@@ -32,7 +32,7 @@
 
 /* 
 
-TERMINAL STUFF
+MODAL UI
 
 */
 .modal__top--bar{
@@ -93,6 +93,12 @@ TERMINAL STUFF
     background-color: #26C83F;
     border: 1px solid #12A025;
 }
+
+/* 
+
+MODAL CONTENT / ANIMATIONS
+
+*/
 .modal__content--text{
     margin: 10px 10px;
 }
@@ -103,49 +109,54 @@ TERMINAL STUFF
 .cmd:nth-child(1)::before{
     content: "Local-MacBook-Pro:~ user$ ";
 }
-.cmd__anim1{
+.cmd:nth-child(1){
     width: 300.5px;
     white-space: nowrap;
     overflow-x: hidden;
+}
+.cmd__anim1{
     animation: write-cmd1 3s forwards;
-    animation-delay: 1s;
 }
 .cmd:nth-child(2)::before{
     content: "Local-MacBook-Pro: WebsiteV1 $ ";
 }
-.cmd__anim2{
+.cmd:nth-child(2){
     height: 0px;
     width: 358px;
     white-space: nowrap;
     overflow-x: hidden;
+}
+.cmd__anim2{
     animation: write-cmd2 3s forwards;
-    animation-delay: 2.5s;
+}
+.output{
+    height: 0px;
+    overflow-y: hidden;
 }
 .output:nth-child(1)::before{
     content: "";
 }
 .output--anim1{
-    height: 0px;
-    overflow-y: hidden;
     animation: print-output1 .15s forwards;
-    animation-delay: 3.3s;
 }
 .cmd:nth-child(4)::before{
     content: "Local-MacBook-Pro: WebsiteV1 $ ";
 }
-.cmd__anim3{
+.cmd:nth-child(4) {
     height: 0px;
     width: 358px;
     white-space: nowrap;
     overflow-x: hidden;
+}
+.cmd__anim3{
     animation: write-cmd3 3s forwards;
-    animation-delay: 3.9s;
 }
 .cmd:nth-child(5)::before{
     content: "Local-MacBook-Pro: WebsiteV1 $ ";
 }
-.cmd__anim3{
+.cmd:nth-child(5){
     height: 0px;
+    overflow: hidden;
 }
 .modal__close{
     position: absolute;
@@ -219,6 +230,15 @@ WINDOW - CONTACT FORM
 }
 .form__add{
     align-items: bottom;
+}
+.email--link{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: #464655;
+}
+.email--link:hover{
+    color: #426AD6;
 }
 
 
