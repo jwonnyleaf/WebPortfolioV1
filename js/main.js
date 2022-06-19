@@ -43,14 +43,14 @@ function toggleModal() {
     output_children.item(0).classList.add("output--anim1");
     setTimeout(function(){
         cmd_children.item(2).style.height = "32px";
-    }, 2800);
+    }, 3500);
     cmd_children.item(2).classList.add("cmd__anim3");
     setTimeout(function(){
         cmd_children.item(3).style.height = "32px";
-    }, 4500);
+    }, 4800);
     cmd_children.item(3).classList.add("cmd__anim3");
     setTimeout(function(){
         document.body.classList.add("window--open");;
-    }, 5500);
+    }, 5800);
 }
 

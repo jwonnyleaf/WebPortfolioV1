@@ -128,7 +128,7 @@ TERMINAL STUFF
     height: 0px;
     overflow-y: hidden;
     animation: print-output1 .15s forwards;
-    animation-delay: 2.7s;
+    animation-delay: 3.3s;
 }
 .cmd:nth-child(4)::before{
     content: "Local-MacBook-Pro: WebsiteV1 $ ";
@@ -139,16 +139,13 @@ TERMINAL STUFF
     white-space: nowrap;
     overflow-x: hidden;
     animation: write-cmd3 3s forwards;
-    animation-delay: 3.7s;
+    animation-delay: 3.9s;
 }
 .cmd:nth-child(5)::before{
     content: "Local-MacBook-Pro: WebsiteV1 $ ";
 }
 .cmd__anim3{
     height: 0px;
-}
-.modal__content--form{
-    visibility: hidden;
 }
 .modal__close{
     position: absolute;
@@ -202,12 +199,26 @@ WINDOW - CONTACT FORM
     color: black;
     font-size: 15px;
 }
+.window__content--form{
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+}
 .form__box{
     margin: 0 0 25px 0;
 }
 .form__input{
     width: 100%;
     resize: vertical;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.401);
+}
+.input--message{
+    height: 75px;
+    max-height: 125px;
+}
+.form__add{
+    align-items: bottom;
 }
 
 
