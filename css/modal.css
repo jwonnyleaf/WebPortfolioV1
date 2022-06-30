@@ -127,6 +127,10 @@ MODAL CONTENT / ANIMATIONS
     overflow-x: hidden;
 }
 .cmd__anim2{
+    -webkit-animation: write-cmd2 3s forwards;
+    -moz-animation: write-cmd2 3s forwards;
+    -o-animation: write-cmd2 3s forwards;
+    -ms-animation: write-cmd2 3s forwards;
     animation: write-cmd2 3s forwards;
 }
 .output{
