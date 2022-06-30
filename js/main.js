@@ -16,3 +16,14 @@ window.onscroll = function () {
     }
     prevScroll = currScroll;
 }
+
+// NAVBAR ANCHOR
+function onHomeAnchor(e) {
+    document.getElementById("home").scrollIntoView();
+}
+function onAboutAnchor(e) {
+    document.getElementById("about").scrollIntoView();
+}
+function onProjectsAnchor(e) {
+    document.getElementById("projects").scrollIntoView();
+}
