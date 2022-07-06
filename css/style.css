@@ -1,6 +1,6 @@
 @import "modal.css";
 
-:root{
+:root {
     --body-color: #E2E8FD;
     --body-color-shadow: #a2acd6;
     --main-blue: #426AD6;
@@ -10,46 +10,46 @@
     --lime: #E6F8B2;
     --white: #FFF;
 }
-@font-face{
+@font-face {
     font-family: 'FiraCode';
     src: url("/fonts/FiraCode-VariableFont_wght.ttf");
 }
-@font-face{
+@font-face {
     font-family: 'Nunito';
     src: url("/fonts/Nunito-VariableFont_wght.ttf");
 }
-@font-face{
+@font-face {
     font-family: 'OpenSans';
     src: url("/fonts/OpenSans-VariableFont_wght.ttf");
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
+html {
     scroll-behavior: smooth;
 }
-body{
+body {
     background-color: var(--body-color);
 }
-section{
+section {
     margin: 0 auto;
     max-width: 1000px;
 }
-h1, h2, h3{
+h1, h2, h3 {
     font-family: "Fira Code";
 }
-p{
+p {
     font-family: "Nunito";
     font-variation-settings: "wght" 500;
     font-size: 1.1rem;
 }
-a{
+a {
     text-decoration: none;
 }
-li{
+li {
     list-style-type: none;
 }
 
@@ -59,11 +59,11 @@ li{
     RANDOM / MISC
 
 */
-.highlighted{
+.highlighted {
     color: var(--main-blue);
     font-variation-settings: "wght" 700;
 }
-.primary-btn{
+.primary-btn {
     font-family: "OpenSans";
     font-variation-settings: "wght" 800;
     background-color: transparent;
@@ -78,7 +78,7 @@ li{
     -moz-transition: all .5s;
     -o-transition: all .5s;
 }
-.primary-btn:hover{
+.primary-btn:hover {
     background-color: var(--main-blue);
     color: var(--white);
     transform: scale(1.1);
@@ -90,7 +90,7 @@ li{
     NAVIGATION BAR
 
 */
-#navbar{
+#navbar {
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -104,17 +104,17 @@ li{
     box-shadow: 0 0 0 var(--body-color-shadow);
     transition: top 0.5s, box-shadow 0.3s;
 }
-#navbar.disappear{
+#navbar.disappear {
     top: -100px;
 }
-#navbar.appear{
+#navbar.appear {
     top: 0px;
     box-shadow: 0 0px 25px var(--body-color-shadow);
 }
-.navbar__links{
+.navbar__links {
     display: flex;
 }
-.navbar__link{
+.navbar__link {
     margin: 1.2rem;
     color: var(--gray);
     font-family: "Nunito";
@@ -126,7 +126,7 @@ li{
     text-shadow: 3px 0 5px rgba(131, 134, 141, 0.85);
     cursor: pointer;
 }
-.navbar__link:hover{
+.navbar__link:hover {
     color: var(--main-blue);
     font-size: 1.5rem;
     text-shadow: 3px 0 5px rgba(99, 168, 220, 0.85);
@@ -138,32 +138,32 @@ li{
     HOME
 
 */
-#home{
+#home {
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.small-header{
+.small-header {
     color: var(--ashy-blue);
     font-size: 1.3rem;
     margin: 0 0 15px 0;
 }
-.big-header{
+.big-header {
     color: var(--main-blue);
     font-size: 5rem;
     font-variation-settings: "wght" 700;
 }
-.big-subheader{
+.big-subheader {
     color: var(--dark-blue);
     font-size: 4rem;
 }
-.home__para{
+.home__para {
     max-width: 525px;
     margin: 15px 0 0 0;
 }
-.home__btn{
+.home__btn {
     margin-top: 1.8rem;
 }
 
@@ -174,24 +174,27 @@ li{
 
 */
 
-.projects__container{
+.section__heading {
+    letter-spacing: 2px;
+    padding-top: 30px;
+}
+.projects__container {
     column-count: 2;
     column-gap: 25px;
-    
 }
-.project{
+.project {
     display: inline-flex;
     flex-direction: column;
     break-inside: avoid;
     margin-top: 25px;
 }
-.project__img{
+.project__img {
     width: 100%;
     background-color: #8291CA;
     border-radius: 10px 10px 0 0;
     padding: 5px 5px 0px 5px;
 }
-.project__info{
+.project__info {
     display: flex;
     flex-direction: column;
     padding: 25px;
@@ -199,25 +202,25 @@ li{
     background-color: #8291CA;
     color: rgb(255, 255, 255);
 }
-.project__info--title-links{
+.project__info--title-links {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: "Fira Code";
     margin-bottom: 10px;
 }
-.project__info--icon{
+.project__info--icon {
     color: black;
 }
-.project__info--techstack ul{
+.project__info--techstack ul {
     display: flex;
     position: relative;
 }
-.project__info--techstack ul li{
+.project__info--techstack ul li {
     font-family: "OpenSans";
     font-variation-settings: "wght" 600;
     font-size: 1rem;
-    margin: 0 25px 6px 0;
+    margin: 0 25px 15px 0;
     color: black;
 }
 
@@ -226,11 +229,11 @@ li{
     FOOTER
 
 */
-#footer{
+#footer {
     height: 80px;
     padding: 15px 0;
 }
-.footer__content{
+.footer__content {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -243,14 +246,14 @@ li{
     letter-spacing: 2px;
     color: var(--dark-blue);
 }
-.footer__content a{
+.footer__content a {
     text-decoration: underline;
     font-variation-settings: "wght" 700;
     margin-top: 5px;
     color:rgb(0, 0, 0);
     transition: all .5s;
 }
-.footer__content a:hover{
+.footer__content a:hover {
     color: var(--main-blue);
     transform: scale(1.1);
 }
@@ -261,7 +264,7 @@ li{
     SOCIALS
 
 */
-#socials{
+#socials {
     position: fixed;
     width: 50px;
     left: 30px;
@@ -271,24 +274,24 @@ li{
     background-color: rgba(211, 220, 252, 0.514);
     padding: 2px;
 }
-.social__bar--list{
+.social__bar--list {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.social__bar--list li{
+.social__bar--list li {
     padding: 15px 0;
     transition: all .5s;
 }
-.social__bar--list li:hover{
+.social__bar--list li:hover {
     color: var(--ashy-blue);
     transform: translateY(-3px) scale(1.1);
 }
-.social__bar--list li a{
+.social__bar--list li a {
     color: var(--ashy-blue);
     transition: all .5s;
 }
-.social__bar--list li a:hover{
+.social__bar--list li a:hover {
     color: var(--main-blue);
 }
 
@@ -298,16 +301,20 @@ li{
     SCROLL BAR
 
 */
-body::-webkit-scrollbar {
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ashy-blue);
+}
+*::-webkit-scrollbar {
     width: 10px;
-  }
+}
   
-  body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: var(--body-color);
-  }
+}
   
-  body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background-color: var(--ashy-blue);
     border-radius: 20px;
     border-right: 2px var(--body-color) solid;
-  }
+}
