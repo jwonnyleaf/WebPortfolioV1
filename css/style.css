@@ -291,3 +291,23 @@ li{
 .social__bar--list li a:hover{
     color: var(--main-blue);
 }
+
+
+/*
+    
+    SCROLL BAR
+
+*/
+body::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--body-color);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--ashy-blue);
+    border-radius: 20px;
+    border-right: 2px var(--body-color) solid;
+  }
