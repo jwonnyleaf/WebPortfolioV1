@@ -45,7 +45,7 @@ MODAL UI
     border-top-right-radius: 12px;
     user-select: none;
 }
-.top--bar__title{
+.top-bar__title{
     position: absolute;
     min-width: 1000px;
     text-align: center;

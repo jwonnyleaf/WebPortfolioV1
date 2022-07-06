@@ -22,10 +22,6 @@
     font-family: 'OpenSans';
     src: url("/fonts/OpenSans-VariableFont_wght.ttf");
 }
-@font-face{
-    font-family: 'Menlo';
-    src: url("/fonts/Menlo-Regular.ttf");
-}
 
 *{
     margin: 0;
@@ -77,6 +73,10 @@ li{
     padding: .7rem 1.3rem;
     letter-spacing: 1px;
     cursor: pointer;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
 }
 .primary-btn:hover{
     background-color: var(--main-blue);
@@ -166,9 +166,6 @@ li{
 .home__btn{
     margin-top: 1.8rem;
 }
-.home__btn--hire{
-    transition: all .5s;
-}
 
 
 /*
@@ -177,6 +174,52 @@ li{
 
 */
 
+.projects__container{
+    column-count: 2;
+    column-gap: 25px;
+    
+}
+.project{
+    display: inline-flex;
+    flex-direction: column;
+    break-inside: avoid;
+    margin-top: 25px;
+}
+.project__img{
+    width: 100%;
+    background-color: #8291CA;
+    border-radius: 10px 10px 0 0;
+    padding: 5px 5px 0px 5px;
+}
+.project__info{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 0 0 10px 10px;
+    background-color: #8291CA;
+    color: rgb(255, 255, 255);
+}
+.project__info--title-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Fira Code";
+    margin-bottom: 10px;
+}
+.project__info--icon{
+    color: black;
+}
+.project__info--techstack ul{
+    display: flex;
+    position: relative;
+}
+.project__info--techstack ul li{
+    font-family: "OpenSans";
+    font-variation-settings: "wght" 600;
+    font-size: 1rem;
+    margin: 0 25px 6px 0;
+    color: black;
+}
 
 /*
     
