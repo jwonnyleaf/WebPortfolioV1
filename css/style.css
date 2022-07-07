@@ -6,6 +6,8 @@
     --main-blue: #426AD6;
     --ashy-blue: #464655;
     --dark-blue: #12255b;
+    --navy: #8291CA;
+    --navy-shadow: #707BA6;
     --gray: #57595d;
     --lime: #E6F8B2;
     --white: #FFF;
@@ -21,6 +23,10 @@
 @font-face {
     font-family: 'OpenSans';
     src: url("/fonts/OpenSans-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: 'SFMono';
+    src: url("/fonts/SFMonoMedium.otf");
 }
 
 * {
@@ -82,6 +88,17 @@ li {
     background-color: var(--main-blue);
     color: var(--white);
     transform: scale(1.1);
+}
+.section__heading {
+    width: fit-content;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    color: white;
+    background-color: var(--dark-blue);
+    box-shadow: 0 2px 10px 2px var(--navy-shadow);
+    padding: 10px 25px;
+    border-radius: 15px;
+    margin: 0 0 10px 0;
 }
 
 
@@ -173,10 +190,8 @@ li {
     PROJECTS
 
 */
-
-.section__heading {
-    letter-spacing: 2px;
-    padding-top: 30px;
+#projects{
+    padding: 35px 0 35px 0;
 }
 .projects__container {
     column-count: 2;
@@ -190,16 +205,18 @@ li {
 }
 .project__img {
     width: 100%;
-    background-color: #8291CA;
+    background-color: var(--navy);
     border-radius: 10px 10px 0 0;
     padding: 5px 5px 0px 5px;
+    box-shadow: 6px 5px var(--navy-shadow);
 }
 .project__info {
     display: flex;
     flex-direction: column;
     padding: 25px;
     border-radius: 0 0 10px 10px;
-    background-color: #8291CA;
+    background-color: var(--navy);
+    box-shadow: 6px 5px var(--navy-shadow);
     color: rgb(255, 255, 255);
 }
 .project__info--title-links {
@@ -207,10 +224,19 @@ li {
     justify-content: space-between;
     align-items: center;
     font-family: "Fira Code";
+    font-variation-settings: "wght" 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     margin-bottom: 10px;
+    color: white;
 }
 .project__info--icon {
+    color: var(--white);
+    transition: .7s all;
+}
+.project__info--icon:hover {
     color: black;
+    transform: translateY(-4px);
 }
 .project__info--techstack ul {
     display: flex;
@@ -218,11 +244,49 @@ li {
 }
 .project__info--techstack ul li {
     font-family: "OpenSans";
-    font-variation-settings: "wght" 600;
-    font-size: 1rem;
-    margin: 0 25px 15px 0;
-    color: black;
+    font-variation-settings: "wght" 700;
+    font-size: .9rem;
+    margin: 0 20px 15px 0;
 }
+.project__info--description {
+    font-size: 1rem;
+}
+
+/*
+    
+    PROJECTS -- TECH STACK ICONS
+
+*/
+.tsban {
+    border-radius: .4rem;
+    padding: 3px 7px;
+    box-shadow: 2px 2px rgba(48, 64, 136, 0.505);
+}
+.python {
+    color: #326897;
+    background-color: #FFE874;
+}
+.hikari {
+    color: #FFFFFF;
+    background-color: #CB276D;
+}
+.postgresql {
+    color: #FFFFFF;
+    background-color: #2F6792;
+}
+.html {
+    color: #FFFFFF;
+    background-color: #FE4C1E;
+}
+.css {
+    color: #FFFFFF;
+    background-color: #0071BF;
+}
+.javascript {
+    color: #FFFFFF;
+    background-color: #E6B101;
+}
+
 
 /*
     
