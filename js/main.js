@@ -22,7 +22,7 @@ function onHomeAnchor(e) {
     document.getElementById("home").scrollIntoView();
 }
 function onAboutAnchor(e) {
-    document.getElementById("about").scrollIntoView();
+    document.getElementById("about-me").scrollIntoView();
 }
 function onProjectsAnchor(e) {
     document.getElementById("projects").scrollIntoView();

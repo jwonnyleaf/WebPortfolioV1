@@ -3,7 +3,7 @@
     MODAL
 
 */
-.modal{
+.modal {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -15,12 +15,12 @@
     transform: translate(-100%, 100%);
     transition: all .5s ease-out;
 }
-.modal--open .modal{
+.modal--open .modal {
     z-index: 999;
     transform: translate(0%, 0%);
     visibility: visible;
 }
-.modal__content{
+.modal__content {
     display: flex;
     flex-direction: column;
     width: 1000px;
@@ -35,7 +35,7 @@
 MODAL UI
 
 */
-.modal__top--bar{
+.modal__top--bar {
     display: flex;
     align-items: center;
     min-width: 100%;
@@ -45,7 +45,7 @@ MODAL UI
     border-top-right-radius: 12px;
     user-select: none;
 }
-.top-bar__title{
+.top-bar__title {
     position: absolute;
     min-width: 1000px;
     text-align: center;
@@ -54,7 +54,7 @@ MODAL UI
     color: black;
     font-size: 15px;
 }
-.buttons__container{
+.buttons__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 85px;
@@ -63,14 +63,14 @@ MODAL UI
     margin-left: 10px;
     z-index: 999;
 }
-.buttons{
+.buttons {
     height: 17px;
     width: 17px;
     border-radius: 100%;
     user-select: none;
     cursor: pointer;
 }
-.close{
+.close {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,15 +81,15 @@ MODAL UI
     border: 1px solid #DA3C37;
     transition: all .3s;
 }
-.close:hover{
+.close:hover {
     transform: rotate(45deg);
     color: black;
 }
-.minimize{
+.minimize {
     background-color: #FBBD2D;
     border: 1px solid #F0A318;
 }
-.maximize{
+.maximize {
     background-color: #26C83F;
     border: 1px solid #12A025;
 }
@@ -99,51 +99,51 @@ MODAL UI
 MODAL CONTENT / ANIMATIONS
 
 */
-.modal__content--text{
+.modal__content--text {
     margin: 10px 10px;
 }
-.modal__content--text p{
+.modal__content--text p {
     font-family: "system-ui";
     font-size: 1.5rem;
 }
-.cmd:nth-child(1)::before{
+.cmd:nth-child(1)::before {
     content: "Local-MacBook-Pro:~ user$ ";
 }
-.cmd:nth-child(1){
+.cmd:nth-child(1) {
     width: 300.5px;
     white-space: nowrap;
     overflow-x: hidden;
 }
-.cmd__anim1{
+.cmd__anim1 {
     animation: write-cmd1 3s forwards;
 }
-.cmd:nth-child(2)::before{
+.cmd:nth-child(2)::before {
     content: "Local-MacBook-Pro: WebsiteV1 $ ";
 }
-.cmd:nth-child(2){
+.cmd:nth-child(2) {
     height: 0px;
     width: 358px;
     white-space: nowrap;
     overflow-x: hidden;
 }
-.cmd__anim2{
+.cmd__anim2 {
     -webkit-animation: write-cmd2 3s forwards;
     -moz-animation: write-cmd2 3s forwards;
     -o-animation: write-cmd2 3s forwards;
     -ms-animation: write-cmd2 3s forwards;
     animation: write-cmd2 3s forwards;
 }
-.output{
+.output {
     height: 0px;
     overflow-y: hidden;
 }
-.output:nth-child(1)::before{
+.output:nth-child(1)::before {
     content: "";
 }
-.output--anim1{
+.output--anim1 {
     animation: print-output1 .15s forwards;
 }
-.cmd:nth-child(4)::before{
+.cmd:nth-child(4)::before {
     content: "Local-MacBook-Pro: WebsiteV1 $ ";
 }
 .cmd:nth-child(4) {
@@ -152,17 +152,17 @@ MODAL CONTENT / ANIMATIONS
     white-space: nowrap;
     overflow-x: hidden;
 }
-.cmd__anim3{
+.cmd__anim3 {
     animation: write-cmd3 3s forwards;
 }
-.cmd:nth-child(5)::before{
+.cmd:nth-child(5)::before {
     content: "Local-MacBook-Pro: WebsiteV1 $ ";
 }
-.cmd:nth-child(5){
+.cmd:nth-child(5) {
     height: 0px;
     overflow: hidden;
 }
-.modal__close{
+.modal__close {
     position: absolute;
     transform: rotate(45deg);
     cursor: pointer;
@@ -179,7 +179,7 @@ MODAL CONTENT / ANIMATIONS
 WINDOW - CONTACT FORM
 
 */
-.window{
+.window {
     top: 450px;
     left: 700px;
     width: 600px;
@@ -191,11 +191,11 @@ WINDOW - CONTACT FORM
     visibility: hidden;
     
 }
-.window--open .window{
+.window--open .window {
     visibility: visible;
     z-index: 9999;
 }
-.window__top--bar{
+.window__top--bar {
     display: flex;
     align-items: center;
     min-width: 100%;
@@ -205,7 +205,7 @@ WINDOW - CONTACT FORM
     border-top-right-radius: 12px;
     user-select: none;
 }
-.window__title{
+.window__title {
     position: absolute;
     min-width: 600px;
     text-align: center;
@@ -214,34 +214,40 @@ WINDOW - CONTACT FORM
     color: black;
     font-size: 15px;
 }
-.window__content--form{
+.window__content--form {
     display: inline-block;
     width: 100%;
     padding: 15px;
 }
-.form__box{
-    margin: 0 0 25px 0;
+.form__box {
+    margin: 0 0 20px 0;
+}
+.form__box--name {
+    font-family: "SFMono";
+    text-transform: uppercase;
+    text-decoration: underline;
+    letter-spacing: 1px;
 }
 .form__input{
+    height: 30px;
     width: 100%;
-    resize: vertical;
+    resize: none;
     border: none;
-    background-color: rgba(128, 128, 128, 0.401);
+    background-color: rgba(128, 128, 128, 0.169);
 }
-.input--message{
-    height: 75px;
-    max-height: 125px;
+.input--message {
+    height: 125px;
 }
-.form__add{
+.form__add {
     align-items: bottom;
 }
-.email--link{
+.email--link {
     position: absolute;
     bottom: 15px;
     right: 15px;
     color: #464655;
 }
-.email--link:hover{
+.email--link:hover {
     color: #426AD6;
 }
 
