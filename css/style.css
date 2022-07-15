@@ -73,11 +73,13 @@ li {
 .primary-btn {
     font-family: "OpenSans";
     font-variation-settings: "wght" 800;
+    font-size: .9rem;
     background-color: transparent;
     color: var(--main-blue);
     border: 3px solid var(--main-blue);
     border-radius: 50px;
     padding: .7rem 1.3rem;
+    margin-top: 1.8rem;
     letter-spacing: 1px;
     cursor: pointer;
     -webkit-transition: all .5s;
@@ -190,9 +192,6 @@ li {
     max-width: 525px;
     margin: 15px 0 0 0;
 }
-.home__btn {
-    margin-top: 1.8rem;
-}
 
 
 /*
@@ -201,13 +200,12 @@ li {
 
 */
 .about-me__container {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 50px;
     height: 100%;
 }
 .about-me__img {
-    width: 300px;
     border-radius: 1rem;
     box-shadow: 0 0 15px 0 var(--dark-blue);
     overflow: hidden;
@@ -225,7 +223,12 @@ li {
 .about-me__img img:hover {
     transform: scale(1.25);
 }
-
+.about-me__para {
+    font-size: 1.5rem;
+}
+.about-me__btn {
+    margin-top: 1.8rem;
+}
 
 
 /*
