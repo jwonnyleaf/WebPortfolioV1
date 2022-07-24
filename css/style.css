@@ -474,8 +474,9 @@ li {
 #socials {
     position: fixed;
     width: 50px;
-    left: 30px;
-    bottom: 30px;
+    left: 15px;
+    bottom: 15px;
+    right: auto;
     border: 3px solid var(--dark-blue);
     border-radius: 10px;
     background-color: rgba(211, 220, 252, 0.514);
