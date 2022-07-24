@@ -1,5 +1,8 @@
 var _navbar = document.querySelector(".navbar");
 var prevScroll = window.scrollY;
+var hamMenuBtn = document.querySelector(".ham-menu");
+var navbarItems = document.querySelector(".navbar__links");
+var navbarItem = document.querySelectorAll(".navbar__link");
 
 // NAVBAR DISAPPEARING
 window.onscroll = function () {
@@ -26,4 +29,23 @@ function onAboutAnchor(e) {
 }
 function onProjectsAnchor(e) {
     document.getElementById("projects").scrollIntoView();
+}
+
+// HAMBURGER MENU TOGGLE
+hamMenuBtn.addEventListener("click", () => {
+    toggleHam();
+})
+
+navbarItem.forEach(item => {
+    item.addEventListener("click", () => {
+        if(hamMenuBtn.classList.contains("open")) {
+            toggleHam();
+        }
+    })
+})
+
+function toggleHam() {
+    hamMenuBtn.classList.toggle("open");
+    navbarItems.classList.toggle("open");
+    document.body.classList.toggle("blur");
 }
