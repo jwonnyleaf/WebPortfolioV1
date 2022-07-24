@@ -29,7 +29,7 @@
     src: url("/fonts/SFMonoMedium.otf");
 }
 
-* {
+*, ::before, ::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -244,11 +244,10 @@ li {
 
 */
 #home {
-    width: 100%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 100vh;
 }
 .small-header {
     color: var(--ashy-blue);
