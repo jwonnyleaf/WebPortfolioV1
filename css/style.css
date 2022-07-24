@@ -312,10 +312,7 @@ li {
     } 
     .about-me__img {
         position: relative;
-        width: 50%;
         margin-top: 75px;
-        margin-left: -25%;
-        left: 50%;
     }
 }
 
