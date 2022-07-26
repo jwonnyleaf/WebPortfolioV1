@@ -267,6 +267,14 @@ li {
     max-width: 525px;
     margin: 15px 0 0 0;
 }
+@media (max-width: 768px) {
+    .big-header {
+        font-size: 4rem;
+    }
+    .big-subheader {
+        font-size: 3rem;
+    }
+}
 
 
 /*
@@ -277,7 +285,7 @@ li {
 .about-me__container {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    column-gap: 50px;
+    column-gap: 80px;
     height: 100%;
 }
 .about-me__img {
@@ -299,8 +307,8 @@ li {
 .about-me__img img:hover {
     transform: scale(1.25);
 }
-.about-me__para {
-    font-size: 1.5rem;
+.about-me__para p {
+    margin-bottom: 15px;
 }
 .about-me__btn {
     margin-top: 1.8rem;
@@ -358,6 +366,9 @@ li {
     letter-spacing: 2px;
     margin-bottom: 10px;
     color: white;
+}
+.project__info--title {
+    max-width: 70%;
 }
 .project__info--icon {
     color: var(--white);

@@ -13,11 +13,13 @@ function toggleModal() {
 }
 function showModal() {
     document.body.classList.add("modal--open");
+    document.body.classList.add("open");
     playAnimate();
 }
 function hideModal() {
     resetAnimate();
     document.body.classList.remove("modal--open");
+    document.body.classList.remove("open");
 }
 function playAnimate() {
     timeouts.push(setTimeout(function() {
